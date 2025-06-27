@@ -28,11 +28,11 @@ class  Reportcard(ABC):
 
 #Step3. Implement grading logic(Inheritance and polymorphism) apply a grade calculation and pass/fail criteria
 
-class Finalreportcard(Reportcard):
+class Finalreportcard(Reportcard):   #(Inheritance)
     def __init__(self, student):
         self.student = student
 
-    def calculate_grade(self):
+    def calculate_grade(self):   #(Polymorphism)
         marks = self.student.get_marks()
         average_score = sum(marks.values()) / len(marks) if marks else 0
 
